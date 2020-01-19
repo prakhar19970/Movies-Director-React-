@@ -1,5 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #282c34;
+}
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -15,13 +24,14 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 14vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  border-bottom: solid 1px #db8312;
 }
 
 .App-link {
@@ -35,4 +45,220 @@
   to {
     transform: rotate(360deg);
   }
+}
+.movie-info {
+  background: black;
+}
+.header-area {
+  background-color: #282c34;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.movie-block {
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 71%;
+  margin: 0% auto 2% auto;
+  border: #d59d1a solid 1px;
+}
+.list-area {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.donation-form {
+  width: 69%;
+  height: 32rem;
+  background: #354463;
+  opacity: 100%;
+}
+.form-title {
+  text-align: left;
+  font: Bold 25px/39px Helvetica;
+  color: #ffffff;
+  width: 68%;
+  height: 44%;
+  top: 54%;
+  position: relative;
+  left: 8%;
+}
+.main {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "pesonal-info-area" "payment-area";
+  width: 100%;
+  height: 62.35rem;
+}
+.personal-info-area {
+  display: grid;
+  grid-template-rows: 20% repeat(4, 20%);
+  grid-template-areas: "info-title" "name" "address1" "address2" "email";
+}
+.info-title {
+  grid-area: info-title;
+}
+.input-long {
+  left: 8%;
+  width: 83%;
+}
+.input-medium {
+  width: 65%;
+  left: 17%;
+}
+.input-small {
+  width: 60%;
+  left: 17%;
+}
+.name {
+  grid-area: name;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "movie actor director";
+}
+.input-movie-name {
+  grid-area: movie;
+  left: 17%;
+}
+.input-last-name {
+  grid-area: last-name;
+  left: 17%;
+}
+.address1 {
+  grid-area: address1;
+  left: 8%;
+}
+.address2 {
+  grid-area: address2;
+  display: grid;
+  grid-template-columns: 50% repeat(2, 1fr);
+  grid-template-areas: "city state zip-code";
+}
+.city {
+  grid-area: city;
+  left: 17%;
+}
+.state {
+  grid-area: state;
+  left: 17%;
+  top: 1%;
+}
+.zip-code {
+  grid-area: zip-code;
+  left: 17%;
+}
+.email {
+  grid-area: email;
+  left: 8%;
+}
+.payment-area {
+  display: grid;
+  grid-template-rows: 20% repeat(3, 20%);
+  grid-template-areas: "pay-title" "creditcard" "expire" "confirm" "navigate";
+}
+.pay-title {
+  grid-area: pay-title;
+}
+.creditcard {
+  grid-area: creditcard;
+  left: 8%;
+}
+.expire {
+  grid-area: expire;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "expiration sec-code";
+}
+.sec-code {
+  grid-area: sec-code;
+  left: 8%;
+}
+.confirm {
+  grid-area: confirm;
+  font: Bold 21px/34px Helvetica;
+  top: 0%;
+}
+.expiration {
+  grid-area: expiration;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "month year";
+}
+.month {
+  grid-area: month;
+  left: 32%;
+}
+.year {
+  grid-area: year;
+  left: 32%;
+}
+.navigate {
+  grid-area: navigate;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "go-back payment";
+}
+.go-back {
+  grid-area: go-back;
+  color: #c1f7d5;
+  position: relative;
+  top: 35%;
+  left: 16%;
+  text-decoration: underline;
+  width: 23%;
+  height: 23%;
+}
+.payment {
+  grid-area: payment;
+  width: 51%;
+  height: 19%;
+  top: 18%;
+  position: relative;
+}
+.input-area {
+  background: transparent;
+  color: #ffffff;
+  height: 42%;
+  position: relative;
+  top: 27%;
+  border: none;
+  border-bottom: 0px solid #c1f7d5;
+  border-bottom-width: 0px;
+  border-bottom-width: 0px;
+  border-width: 2px;
+}
+
+.label-text {
+  color: white;
+  text-align: left;
+  font: lighter 13px/13px Helvetica;
+  letter-spacing: 0.56px;
+  position: relative;
+  height: 2rem;
+  top: 1rem;
+  width: 48%;
+}
+
+.home-page-body {
+  background-color: #282c34;
+}
+
+.movie-link {
+  display: flex;
+  height: 30rem;
+  align-items: center;
+}
+.movies-button {
+  background: #86827c;
+
+  height: 8rem;
+
+  width: 19rem;
+
+  font-size: xxx-large;
 }

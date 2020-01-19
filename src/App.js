@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import Showmovies from './components/Moviespage/Showmovies'
+// import Showdirectors from './components/Directorpage/Showdirectors'
+import homepage from './components/main/homepage'
+import './App.css'
+import { Route, BrowserRouter, Switch, withRouter } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (
+      <BrowserRouter>
+        <div className="App">
+          <homepage.Header />
+          <homepage.Body />
+          <Switch>
+            <Route path="/movies" component={Showmovies} exact />
+
+          </Switch>
+        </div>
+      </BrowserRouter>
+    );
+  }
 }
 
 export default App;
+            /* <Route path="/directors" component={Showdirectors} exact /> */
