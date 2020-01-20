@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom'
 var url = 'http://localhost:8081/api/directors/'
 
 class Addnewdirector extends Component {
-    componentDidMount() {
-    }
+
     state = {
         'Director': ''
     }
@@ -33,6 +32,7 @@ class Addnewdirector extends Component {
         await this.setState({ Director: e.target[0].value });
         console.log(this.state)
         console.log(JSON.stringify(this.state))
+        document.getElementById('director-form').value = '';
         this.addDirector(this.state)
     }
 
@@ -45,7 +45,7 @@ class Addnewdirector extends Component {
                             </div>
                     <div className="name">
                         <label className="input-movie-name label-text dir-form-text ">Title</label>
-                        <input className="input-movie-name input-long dir-form-text input-area" type="text" name="title" placeholder="Director Name" required />
+                        <input id="director-form" className="input-movie-name input-long dir-form-text input-area" type="text" name="title" placeholder="Director Name" required />
                     </div>
                     <button className='form-submit' type='submit' >Submit</button>
                     <Link to="/directors">

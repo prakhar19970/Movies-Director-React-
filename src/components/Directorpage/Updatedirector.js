@@ -5,7 +5,6 @@ var url = 'http://localhost:8081/api/directors/'
 class Updatedirector extends Component {
     componentDidMount() {
         this.singledirector();
-        //     console.log("hello")
     }
     state = {
         data: {

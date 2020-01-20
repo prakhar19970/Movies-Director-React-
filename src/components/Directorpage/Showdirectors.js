@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import Addnewmovie from '../Moviespage/Addnewmovie'
+
 import { Link } from 'react-router-dom'
 var url = 'http://localhost:8081/api/directors/'
 
@@ -18,7 +18,7 @@ class Showdirectors extends Component {
         });
     }
     dirDelete = (event) => {
-        // console.log(event.target);
+
         const id = event.target.parentElement.parentElement.parentElement.attributes.position.value;
         console.log(id);
         this.deleteDirector(Number(id));
@@ -61,8 +61,6 @@ class Showdirectors extends Component {
                 < div className="director-area" >
                     {
                         this.state.directors.map((data, index) => (
-                            // console.log(data.Title)
-
                             <div position={data.id} key={data.id}
                                 className='director-block'>
 

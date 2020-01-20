@@ -7,7 +7,7 @@ var url = 'http://localhost:8081/api/movies/'
 class Updatemovie extends Component {
     componentDidMount() {
         this.singlemovie();
-        //     console.log("hello")
+
     }
     state = {
         data: {
@@ -162,9 +162,3 @@ class Updatemovie extends Component {
 }
 
 export default Updatemovie;
-        // movUpdate = (event) => {
-        //     const id = event.target.parentElement.parentElement.parentElement.attributes.position.value;
-        //     console.log(id);
-        //     this.updateMovie(Number(id));
-        // }
-        // updateMovie = async(data)

@@ -58,6 +58,7 @@ class Addnewmovie extends Component {
             }
 
         }
+        document.getElementById('movie-form').value = '';
         console.log(this.state)
         console.log(JSON.stringify(this.state))
         this.addMovie(this.state)
@@ -74,7 +75,7 @@ class Addnewmovie extends Component {
                             </div>
                             <div className="name">
                                 <label className="input-movie-name label-text ">Title</label>
-                                <input className="input-movie-name input-long input-area" type="text" name="title" placeholder="Movie Name" required />
+                                <input id="movie-form" className="input-movie-name input-long input-area" type="text" name="title" placeholder="Movie Name" required />
                                 <label className="input-actor-name label-text ">Actor</label>
                                 <input className="input-actor-name input-medium  input-area" type="text" name="actor" placeholder="Actor name" />
                                 <label className="input-director-name label-text ">Director</label>

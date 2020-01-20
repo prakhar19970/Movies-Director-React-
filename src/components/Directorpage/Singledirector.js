@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
 var url = 'http://localhost:8081/api/directors/'
 
 class Singledirectors extends Component {

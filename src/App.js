@@ -7,7 +7,7 @@ import Addnewdirector from './components/Directorpage/Addnewdirector'
 import Singledirector from './components/Directorpage/Singledirector'
 import Singlemovies from './components/Moviespage/Singlemovie'
 import './App.css'
-import { Route, BrowserRouter, Switch, Link, withRouter } from "react-router-dom";
+import { Route, BrowserRouter, Switch } from "react-router-dom";
 import Updatemovie from './components/Moviespage/Updatemovie';
 import Updatedirector from './components/Directorpage/Updatedirector';
 
@@ -41,5 +41,3 @@ class App extends Component {
 }
 
 export default App;
-            /*
-/* <Route path='/movies/add' component={Addnewmovie} exact /> */
