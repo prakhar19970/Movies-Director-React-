@@ -46,9 +46,7 @@ body {
     transform: rotate(360deg);
   }
 }
-.movie-info {
-  background: black;
-}
+
 .header-area {
   background-color: #282c34;
   height: 5rem;
@@ -65,17 +63,22 @@ body {
   width: 71%;
   margin: 0% auto 2% auto;
   border: #d59d1a solid 1px;
+  padding: 3%;
 }
 .list-area {
   display: flex;
   flex-direction: column;
   text-align: left;
+  padding: 2%;
 }
-
+.list-area-director {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 .donation-form {
   width: 69%;
-  height: 32rem;
-  background: #354463;
+  height: 39rem;
   opacity: 100%;
 }
 .form-title {
@@ -90,15 +93,15 @@ body {
 }
 .main {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas: "pesonal-info-area" "payment-area";
   width: 100%;
-  height: 62.35rem;
+  grid-template-rows: 1fr;
+  grid-template-areas: "pesonal-info-area";
+  height: 31.35rem;
 }
 .personal-info-area {
   display: grid;
-  grid-template-rows: 20% repeat(4, 20%);
-  grid-template-areas: "info-title" "name" "address1" "address2" "email";
+  grid-template-rows: repeat(6, 20%) 10%;
+  grid-template-areas: "info-title" "name" "address1" "address2" "address3" "email" "submit";
 }
 .info-title {
   grid-area: info-title;
@@ -125,83 +128,64 @@ body {
   grid-area: movie;
   left: 17%;
 }
-.input-last-name {
-  grid-area: last-name;
+.input-actor-name {
+  grid-area: actor;
+  left: 17%;
+}
+.input-director-name {
+  grid-area: director;
   left: 17%;
 }
 .address1 {
   grid-area: address1;
-  left: 8%;
+  left: 6%;
 }
 .address2 {
   grid-area: address2;
   display: grid;
-  grid-template-columns: 50% repeat(2, 1fr);
-  grid-template-areas: "city state zip-code";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "rating genre runtime";
 }
-.city {
-  grid-area: city;
+.rating {
+  grid-area: rating;
   left: 17%;
 }
-.state {
-  grid-area: state;
+.genre {
+  grid-area: genre;
   left: 17%;
   top: 1%;
 }
-.zip-code {
-  grid-area: zip-code;
+.runtime {
+  grid-area: runtime;
   left: 17%;
 }
 .email {
   grid-area: email;
-  left: 8%;
+  left: 6%;
 }
-.payment-area {
+.address3 {
+  grid-area: address3;
   display: grid;
-  grid-template-rows: 20% repeat(3, 20%);
-  grid-template-areas: "pay-title" "creditcard" "expire" "confirm" "navigate";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "metascore votes year";
 }
-.pay-title {
-  grid-area: pay-title;
+.metascore {
+  grid-area: metascore;
+  left: 17%;
 }
-.creditcard {
-  grid-area: creditcard;
-  left: 8%;
-}
-.expire {
-  grid-area: expire;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "expiration sec-code";
-}
-.sec-code {
-  grid-area: sec-code;
-  left: 8%;
-}
-.confirm {
-  grid-area: confirm;
-  font: Bold 21px/34px Helvetica;
-  top: 0%;
-}
-.expiration {
-  grid-area: expiration;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "month year";
-}
-.month {
-  grid-area: month;
-  left: 32%;
+.votes {
+  grid-area: votes;
+  left: 17%;
 }
 .year {
   grid-area: year;
-  left: 32%;
+  left: 17%;
 }
-.navigate {
-  grid-area: navigate;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "go-back payment";
+.form-submit {
+  grid-area: submit;
+  margin-left: auto;
+  width: 15%;
+  margin-right: auto;
 }
 .go-back {
   grid-area: go-back;
@@ -213,13 +197,7 @@ body {
   width: 23%;
   height: 23%;
 }
-.payment {
-  grid-area: payment;
-  width: 51%;
-  height: 19%;
-  top: 18%;
-  position: relative;
-}
+
 .input-area {
   background: transparent;
   color: #ffffff;
@@ -252,13 +230,59 @@ body {
   display: flex;
   height: 30rem;
   align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
 .movies-button {
   background: #86827c;
-
   height: 8rem;
-
   width: 19rem;
-
   font-size: xxx-large;
+}
+.movie-info {
+  background: black;
+  display: flex;
+}
+.movie-info-button-area {
+  display: flex;
+  flex-direction: column;
+  height: 11rem;
+  justify-content: space-evenly;
+}
+.movie-info-buttons {
+  background: #86827c;
+  height: 4rem;
+  width: 13rem;
+  font-size: 117%;
+  box-shadow: inset 4px -4px 9px rgba(13, 12, 12, 0.5);
+}
+.director-block {
+  color: white;
+  height: 7rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 40%;
+  margin: 0% auto 2% auto;
+  border: #d59d1a solid 1px;
+}
+.director-area {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-director-title {
+  text-align: left;
+  font: Bold 25px/39px Helvetica;
+  color: #ffffff;
+  width: 68%;
+  margin-left: 8%;
+}
+.dir-form-text {
+  height: 5rem;
+  margin-left: 8%;
+}
+.link-css {
+  text-decoration: none;
+  color: white;
 }
